@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+	<head>
+		<title>manythingsblue ~ </title>
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="//use.typekit.net/tzw8cbe.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<style>
+			body,html
+			{
+				width:100%;
+				
+				margin:0;
+				padding:0;
+
+				font-family: 'Amatic SC', cursive;
+
+				color:#111;
+
+				background:#b8e0ff;
+			}
+			body, section, .ocean {
+				-webkit-transition:color 4s, background-color 7s;
+    			transition:color 4s, background-color 7s;
+			}
+			.wrapper
+			{
+				overflow:hidden;
+				width:100%;
+				height: 100%;
+				position: relative;
+
+			}
+			h1
+			{
+				margin: -130px auto 30px;
+				text-align: center;
+
+				position: relative;
+				font-size: 100px;
+
+				opacity: 0.8;
+
+				
+			}
+			blockquote
+			{
+				text-align: center;
+				max-width:550px;
+				font-size: 28px;
+				margin:1em auto;
+				position: relative;
+			}
+			.cloud{
+				position:absolute;
+				top:100px;
+				left:-100px;
+				width:700px;
+				height:200px;
+				opacity: 0.95;
+
+				-webkit-transition:opacity 7s;
+    			transition:opacity 7s;
+			}
+			.cloud1
+			{
+				background:url(cloud1.png) no-repeat;
+			}
+
+			.cloud2
+			{
+				background:url(cloud2.png) no-repeat;
+			}
+
+			.cloud3
+			{
+				background:url(cloud3.png) no-repeat;
+			}
+
+			article	{
+
+				font-family: "jubilat", sans-serif;
+				font-weight: 300;
+				padding:0;
+				
+				margin: 20px auto  20px;
+				max-width: 700px;
+				color:#eee;
+			}
+			article:after
+			{
+				width:100%;
+				display: block;
+				text-align: center;
+				content: "~-~";
+				letter-spacing: -5px;
+				font-size: 50px;
+				font-weight: 100;
+				line-height: 50px;
+				color:#fff;
+				opacity: 0.4;
+				font-family: "Amatic SC";
+			}
+		
+
+			section {
+				background:#292768;
+				position: relative;
+				margin:0;
+
+				padding:0 10px;
+
+
+			}
+			.ocean
+			{
+				
+				font-family: arial;
+				
+				padding: 0px;
+				line-height: 1;
+				top:0;
+				width:100%;
+				color:#ddd;
+				height:20px;
+				text-align: center;
+
+				font-weight: normal;
+				font-size: 12px;
+				margin-bottom: 60px;
+			}
+
+			section h2, section h3
+			{
+				font-weight: 100;
+				font-style: italic;
+				opacity: .7;
+			}
+			section h2
+			{
+				font-size: 30px;
+				margin:20px 0 0;
+				padding: 0;
+				line-height: 0.7em;
+			}
+
+			section a
+			{
+				color:#a3d5f5;
+
+				-webkit-transition:color 0.3s, background-color .3s;
+    			transition:color 0.3s, background-color .3s;
+
+    			text-decoration: none;
+    			padding:0 3px;
+    			background:#29170e;
+
+			}
+			section a:hover
+			{
+				background:#29170e;
+				color:#ffa;
+			}
+
+			.celestial-body
+			{
+				border-radius: 50%;
+				background:#fcff00;
+				width:200px;
+				height:200px;
+				margin:0 auto;
+				position: relative;
+				top:0;
+				box-shadow: 0 0 43px 15px rgba(255,255,255,100);
+			}
+
+			@media only screen 
+				and (max-width : 600px) {
+				/* Styles */
+				h1
+				{
+					font-size: 80px;
+				}
+			}
+		</style>
+
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+			function sunset()
+			{
+
+			}
+			var day = true;
+
+			function moveCloudsAndSun()
+			{
+				$(".cloud").each(function(ix, el)
+				{
+					var offset = (ix+1)*5;
+					var left = $(this).css("left");
+
+					if(parseInt(left) - window.innerWidth > 0)
+					{
+						left = -1000;
+					}
+					//console.log(left);
+					$(this).css("left", parseInt(left) + offset);
+
+				});
+
+				var top = parseInt($(".celestial-body").css("top"));
+
+				if(top > 800)
+				{
+					console.log(day);
+					top = -500;
+					if(!day) {
+						$(".celestial-body").css("background", "#fcff00");
+						day = true;
+
+
+						
+					} else {
+						$(".celestial-body").css("background", "#ddd");
+						day = false;
+					}
+					
+				}
+				else if(top > 300 ) {
+					changeTime();
+				} else if(top > 650)
+				{
+					//$(".celestial-body").css("background:#fff");
+				}
+
+				
+				$(".celestial-body").css("top", top+10);	
+			}
+
+			
+			function changeTime()
+			{
+					if(day) {
+						$("body").css({ 'background': "#003", 'color':'#fff' });
+						$(".cloud").css("opacity", "0.04");
+
+						$("section").css("background", "#0a0925");
+						$(".ocean").css("color", "#888");
+					} else {
+						$("body").css({ 'background': "#b8e0ff", 'color':'#111' });
+						$(".cloud").css("opacity", "0.95");
+						
+						$("section").css("background", "#292768");
+						$(".ocean").css("color", "#ddd");
+					}
+			}
+
+			$(function() {
+				setInterval(moveCloudsAndSun, 200);
+
+				//setInterval(changeTime, 10000);
+				setInterval(ripple, 300);
+
+			});
+			function ripple() {
+				var ripples = "";
+				for(var i=0; i< getRandomInt(700,1100); i++)
+				{
+					if(getRandomInt(1,30) == 4)
+					{
+						ripples += "----";
+					}
+					else
+						ripples += "&nbsp;"
+				}
+				
+				
+				$(".ocean").html(ripples);
+			}
+
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class='celestial-body'></div>
+			<div class="cloud cloud3"></div>
+			<div class="cloud cloud1"></div>
+			
+			<h1>manythingsblue</h1>
+
+			<div class="cloud cloud2"></div>
+
+			<blockquote>
+				&ldquo;Worry a little bit every day and in a lifetime you will lose a couple of years. If something is wrong, fix it if you can. But train yourself not to worry: Worry never fixes anything.&rdquo;
+				<br />
+				&ndash;  Ernest Hemingway
+			</blockquote>
+
+			
+
+
+			<section>
+				<div class="ocean"></div>
+				<article id="occupation">
+
+					<h2>Programmer of Things</h2>
+					<h3>&ldquo;Full stack&rdquo; (Not as delicious as it sounds)</h3>
+					<p>
+						 I built custom web applications as a freelancer for a few years, so I have a wide variety of skills. I'm good at figuring things out and getting things done, which is (I guess) useful.
+					</p>
+					
+					<p>
+						Personally, I'm a fan of <a href='http://rubyonrails.com' target="_blank">Ruby on Rails</a>.
+					</p>
+					<p>
+						I <em>hand-crafted</em> this awesome website that you're looking at. It exemplifies the best practices of nothing, but was fun to hack together.
+					</p>
+					<p>
+						Right now I work at <a href='http://rtslabs.com' target="_blank">RTS Labs</a> in Innsbrook, VA, with a bunch of smart people. 
+					</p>
+				</article>
+				<article id="personal">
+					<h2>Personally</h2>
+					<h3>Excruciating detail</h3>
+					<p>
+						I like to go to the art museum with my wife. The kids (~4, ~2) like to go as well, though they spend relatively more time running through the grass, and less time sipping a drink and chatting. Different strokes, I guess.
+					</p>
+				</article>
+				<article id="misc">
+					<h2>Hobbies</h2>
+					<h3><strike>Stagecoach robbery</strike> &nbsp;Helping everyone</h3>
+					<p>
+						I've been playing golf for a couple years. It's <em>awesome</em>. Except for all the times it's terrible and frustrating.
+					</p>
+					<p>
+						It's kind of sad that I wrote about golf before books, but I do like to read (and have been doing it longer than golf, so I'm better at it). I read less than before I had kids.&nbsp; :) </p>
+					<p>
+						I like music as well. Radiohead, Modest Mouse, Belle and Sebastian, Libertines, The Shins, and you know, just about whatever.
+					</p>
+					
+				</article>
+
+				<article id="misc">
+					<center>E-mail me: <a href='mailto:taylor@manythingsblue.com'>taylor@manythingsblue.com</a>
+						<br>
+						<em>(I'm unavailable for freelance work. Get in touch with my employer (<a href='http://rtslabs.com' target="_blank">RTS Labs</a>) if you need something developed.)</em>
+					</center>
+					
+				</article>
+				
+			</section>
+			
+		</div>
+	</body>
+</html>
