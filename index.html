@@ -1,361 +1,137 @@
 <!doctype html>
 <html>
 	<head>
-		<title>manythingsblue ~ </title>
-		<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
-		
-		<script type="text/javascript" src="//use.typekit.net/tzw8cbe.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<title>Taylor Campbell / manythingsblue</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='css/normalize.css' rel='stylesheet' type='text/css'>
+		<link href='css/typebase.css' rel='stylesheet' type='text/css'>
+		<link href='css/manythingsblue.css' rel='stylesheet' type='text/css'>
 
-		<style>
-			body,html
-			{
-				width:100%;
-				
-				margin:0;
-				padding:0;
-
-				font-family: 'Amatic SC', cursive;
-
-				color:#111;
-
-				background:#b8e0ff;
-			}
-			body, section, .ocean {
-				-webkit-transition:color 4s, background-color 7s;
-    			transition:color 4s, background-color 7s;
-			}
-			.wrapper
-			{
-				overflow:hidden;
-				width:100%;
-				height: 100%;
-				position: relative;
-
-			}
-			h1
-			{
-				margin: -130px auto 30px;
-				text-align: center;
-
-				position: relative;
-				font-size: 100px;
-
-				opacity: 0.8;
-
-				
-			}
-			blockquote
-			{
-				text-align: center;
-				max-width:550px;
-				font-size: 28px;
-				margin:1em auto;
-				position: relative;
-			}
-			.cloud{
-				position:absolute;
-				top:100px;
-				left:-100px;
-				width:700px;
-				height:200px;
-				opacity: 0.95;
-
-				-webkit-transition:opacity 7s;
-    			transition:opacity 7s;
-			}
-			.cloud1
-			{
-				background:url(cloud1.png) no-repeat;
-			}
-
-			.cloud2
-			{
-				background:url(cloud2.png) no-repeat;
-			}
-
-			.cloud3
-			{
-				background:url(cloud3.png) no-repeat;
-			}
-
-			article	{
-
-				font-family: "jubilat", sans-serif;
-				font-weight: 300;
-				padding:0;
-				
-				margin: 20px auto  20px;
-				max-width: 700px;
-				color:#eee;
-			}
-			article:after
-			{
-				width:100%;
-				display: block;
-				text-align: center;
-				content: "~-~";
-				letter-spacing: -5px;
-				font-size: 50px;
-				font-weight: 100;
-				line-height: 50px;
-				color:#fff;
-				opacity: 0.4;
-				font-family: "Amatic SC";
-			}
-		
-
-			section {
-				background:#292768;
-				position: relative;
-				margin:0;
-
-				padding:0 10px;
-
-
-			}
-			.ocean
-			{
-				
-				font-family: arial;
-				
-				padding: 0px;
-				line-height: 1;
-				top:0;
-				width:100%;
-				color:#ddd;
-				height:20px;
-				text-align: center;
-
-				font-weight: normal;
-				font-size: 12px;
-				margin-bottom: 60px;
-			}
-
-			section h2, section h3
-			{
-				font-weight: 100;
-				font-style: italic;
-				opacity: .7;
-			}
-			section h2
-			{
-				font-size: 30px;
-				margin:20px 0 0;
-				padding: 0;
-				line-height: 0.7em;
-			}
-
-			section a
-			{
-				color:#a3d5f5;
-
-				-webkit-transition:color 0.3s, background-color .3s;
-    			transition:color 0.3s, background-color .3s;
-
-    			text-decoration: none;
-    			padding:0 3px;
-    			background:#29170e;
-
-			}
-			section a:hover
-			{
-				background:#29170e;
-				color:#ffa;
-			}
-
-			.celestial-body
-			{
-				border-radius: 50%;
-				background:#fcff00;
-				width:200px;
-				height:200px;
-				margin:0 auto;
-				position: relative;
-				top:0;
-				box-shadow: 0 0 43px 15px rgba(255,255,255,100);
-			}
-
-			@media only screen 
-				and (max-width : 600px) {
-				/* Styles */
-				h1
-				{
-					font-size: 80px;
-				}
-			}
-		</style>
-
-		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script>
-			function sunset()
-			{
-
-			}
-			var day = true;
-
-			function moveCloudsAndSun()
-			{
-				$(".cloud").each(function(ix, el)
-				{
-					var offset = (ix+1)*5;
-					var left = $(this).css("left");
-
-					if(parseInt(left) - window.innerWidth > 0)
-					{
-						left = -1000;
-					}
-					//console.log(left);
-					$(this).css("left", parseInt(left) + offset);
-
-				});
-
-				var top = parseInt($(".celestial-body").css("top"));
-
-				if(top > 800)
-				{
-					console.log(day);
-					top = -500;
-					if(!day) {
-						$(".celestial-body").css("background", "#fcff00");
-						day = true;
-
-
-						
-					} else {
-						$(".celestial-body").css("background", "#ddd");
-						day = false;
-					}
-					
-				}
-				else if(top > 300 ) {
-					changeTime();
-				} else if(top > 650)
-				{
-					//$(".celestial-body").css("background:#fff");
-				}
-
-				
-				$(".celestial-body").css("top", top+10);	
-			}
-
-			
-			function changeTime()
-			{
-					if(day) {
-						$("body").css({ 'background': "#003", 'color':'#fff' });
-						$(".cloud").css("opacity", "0.04");
-
-						$("section").css("background", "#0a0925");
-						$(".ocean").css("color", "#888");
-					} else {
-						$("body").css({ 'background': "#b8e0ff", 'color':'#111' });
-						$(".cloud").css("opacity", "0.95");
-						
-						$("section").css("background", "#292768");
-						$(".ocean").css("color", "#ddd");
-					}
-			}
-
-			$(function() {
-				setInterval(moveCloudsAndSun, 200);
-
-				//setInterval(changeTime, 10000);
-				setInterval(ripple, 300);
-
-			});
-			function ripple() {
-				var ripples = "";
-				for(var i=0; i< getRandomInt(700,1100); i++)
-				{
-					if(getRandomInt(1,30) == 4)
-					{
-						ripples += "----";
-					}
-					else
-						ripples += "&nbsp;"
-				}
-				
-				
-				$(".ocean").html(ripples);
-			}
-
-			function getRandomInt(min, max) {
-				return Math.floor(Math.random() * (max - min + 1)) + min;
-			}
-
-		</script>
+		<script src="https://use.typekit.net/kok5zet.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class='celestial-body'></div>
-			<div class="cloud cloud3"></div>
-			<div class="cloud cloud1"></div>
-			
-			<h1>manythingsblue</h1>
-
-			<div class="cloud cloud2"></div>
-
-			<blockquote>
-				&ldquo;Worry a little bit every day and in a lifetime you will lose a couple of years. If something is wrong, fix it if you can. But train yourself not to worry: Worry never fixes anything.&rdquo;
-				<br />
-				&ndash;  Ernest Hemingway
-			</blockquote>
-
-			
-
-
-			<section>
-				<div class="ocean"></div>
-				<article id="occupation">
-
-					<h2>Programmer of Things</h2>
-					<h3>&ldquo;Full stack&rdquo; (Not as delicious as it sounds)</h3>
-					<p>
-						 I built custom web applications as a freelancer for a few years, so I have a wide variety of skills. I'm good at figuring things out and getting things done, which is (I guess) useful.
-					</p>
-					
-					<p>
-						Personally, I'm a fan of <a href='http://rubyonrails.com' target="_blank">Ruby on Rails</a>.
-					</p>
-					<p>
-						I <em>hand-crafted</em> this awesome website that you're looking at. It exemplifies the best practices of nothing, but was fun to hack together.
-					</p>
-					<p>
-						Right now I work at <a href='http://rtslabs.com' target="_blank">RTS Labs</a> in Innsbrook, VA, with a bunch of smart people. 
-					</p>
-				</article>
-				<article id="personal">
-					<h2>Personally</h2>
-					<h3>Excruciating detail</h3>
-					<p>
-						I like to go to the art museum with my wife. The kids (~4, ~2) like to go as well, though they spend relatively more time running through the grass, and less time sipping a drink and chatting. Different strokes, I guess.
-					</p>
-				</article>
-				<article id="misc">
-					<h2>Hobbies</h2>
-					<h3><strike>Stagecoach robbery</strike> &nbsp;Helping everyone</h3>
-					<p>
-						I've been playing golf for a couple years. It's <em>awesome</em>. Except for all the times it's terrible and frustrating.
-					</p>
-					<p>
-						It's kind of sad that I wrote about golf before books, but I do like to read (and have been doing it longer than golf, so I'm better at it). I read less than before I had kids.&nbsp; :) </p>
-					<p>
-						I like music as well. Radiohead, Modest Mouse, Belle and Sebastian, Libertines, The Shins, and you know, just about whatever.
-					</p>
-					
-				</article>
-
-				<article id="misc">
-					<center>E-mail me: <a href='mailto:taylor@manythingsblue.com'>taylor@manythingsblue.com</a>
-						<br>
-						<em>(I'm unavailable for freelance work. Get in touch with my employer (<a href='http://rtslabs.com' target="_blank">RTS Labs</a>) if you need something developed.)</em>
-					</center>
-					
-				</article>
+		<div class="container">			
+			<div id="overview">
+				<h1>
+					Taylor
+					<span>Campbell</span>
+				</h1>
+				<p>Full-stack Web Developer in Richmond, VA</p>
 				
-			</section>
-			
+				<ul id='focus-skills' class='lead'>
+					 <li><i class="fa fa-star"></i> Ruby on Rails, AngularJS</li>
+				</ul>
+
+				<ul id="additional-skills">
+					<li>PostgreSQL, MySQL</li>
+					<li>HTML, CSS, Javascript</li>
+					<li>Sass, Bower, Grunt</li>
+					<li>jQuery, PHP, WordPress</li>
+					<li>AWS, Ubuntu, Mac OS X</li>
+					<li>Elasticsearch, ReactJS</li>
+					<li>Curious, creative, helpful</li>
+				</ul>
+				<p>
+					<a href='mailto:taylor@manythingsblue.com'><i class="fa fa-envelope"></i></a>
+				</p>
+			</div>
+			<!--div id="sidebar">
+				<h1>manythingsblue <br>
+				<small>Taylor Campbell</small>
+				</h1>
+			</div-->
+
+			<div id='main-content'>		
+				<section id='professionally'>
+					<h2>Professionally:</h2>
+					<p class='lead'>
+						I write web apps.
+					</p>
+					<p>Since I was ~15, so almost half my life now. They (and I) have gotten better since my first attempts. I'm currently happily working with <a href='http://rubyonrails.com' target="_blank">Ruby on Rails</a>, <a href='http://angularjs.org' target='_blank'>AngularJS</a>, and <a href='http://www.postgresql.org/' target='_blank'>PostgreSQL</a>, hosted on AWS.</p>
+					<!-- <p>
+						I live in Richmond, VA and work at <a href='http://rtslabs.com' target="_blank">RTS Labs</a> with a bunch of smart folks.
+					</p> -->
+					<p>
+						I'm currently learning <a href='https://facebook.github.io/react/' target='_blank'>React</a>, and recently (a million years late to this party) trying to practice test-driven development with more rigor.
+					</p>
+				</section>
+				<h2>Unprofessionally:</h2>
+				<article>
+					<p class='lead'>
+						I write code for fun.
+					</p>
+					<p>I've always been interested in game development -- I fell in love with creating things on computers when I was 11, hanging out on AOL forums and discussing GameMaker and Hypercard. More recently, I've done a couple Ludum Dare 48-hour game jams, with great enjoyment and sleepiness.</p>
+
+					<div class='col-2'>
+						<section class="game">
+							<p><strong>Ludum Dare 33: Better than expected!</strong></p>
+							<iframe src="https://itch.io/embed/34324?dark=true" width="552" height="167" frameborder="0"></iframe>
+							<p class='hug'>
+								<em>
+								<a href='https://bitbucket.org/tc4mpbell/ld33' target='_blank'>LD33 Source <i class="fa fa-external-link"></i></a>: I used PhaserJS here. Good engine, but the docs were confusing. Keeping scope under control made this a complete, if not spectacular, first-ever-game. Code was fantastically bad.
+								</em>
+							</p>
+						</section>
+						<section class="game">
+							<p><strong>Ludum Dare 34: Unsuccessfully ambitious!</strong></p>
+							<iframe src="https://itch.io/embed/47102?dark=true" width="552" height="167" frameborder="0"></iframe>
+							<p class='hug'>
+								<em>
+								<a href='https://github.com/tc4mpbell/ld34-vampire-garden' target='_blank'>LD34 Source <i class="fa fa-external-link"></i></a>: I used PhaserJS as the engine, and used Babel so I could use ES6 features (classes!). That all worked well, I only failed in the 'build a fun game' department. Vastly superior to last, code-organization-wise.
+								</em>
+							</p>
+						</section>
+					</div>
+				</article>
+				<hr clear='both'>
+				<div class='col-2'>
+					<article id="personal">
+						<p class='lead'>
+							When not writing code...
+						</p>
+						<p>
+							Richmond has a fantastic <a href='http://vmfa.museum' target="_blank">art museum</a>. Anya and I go there whenever opportunity arises. They have a great restaurant where I found my <em><a href='#recipe'>favorite cocktail of the year <i class="fa fa-anchor fa-sm"></i></a></em>.
+						</p>
+
+						<p>
+							I also like to hang out with my kids -- Imogen loves to read and is currently hooked on <a href='http://code.org' target="_blank">Code.org</a>, which is <em>awesome</em>, Ira is into Star Wars, though he still calls Chewbacca "the bear" sometimes. I read: Gene Wolfe, Neil Gaiman, Iain M. Banks, Terry Pratchett (and of course Tolkien, Lewis, etc.).
+						</p>
+						<p>
+							In the fake sports category, I got into golf a few years ago. I play with my dad once a month or so on a Friday, since we're both off work. It's very addicting, and should be relaxing.
+						</p>
+						<p>I listen to music &ndash; Radiohead, Belle and Sebastian, Libertines, Punch Brothers, <em>whoever</em>. I want to listen to more Beethoven.</p>
+						<br>
+						<iframe src="https://embed.spotify.com/?uri=spotify:trackset:Taylormusic:4toSP60xmDNCFuXly8ywNZ,3OMhzdWvCtjr3PNTFizYu9,3QKCxyJA3ITuCAaxEhjAxt,5a4ZTEMp6wULHTEzJclKxt,7Ax6EyL9YP2Rj9naSv9yOT" frameborder="0" allowtransparency="true" height="320" width="500"></iframe>
+
+						<!-- <iframe src="https://embed.spotify.com/?uri=spotify:track:4toSP60xmDNCFuXly8ywNZ" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+						<iframe src="https://embed.spotify.com/?uri=spotify:track:3OMhzdWvCtjr3PNTFizYu9" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+						<iframe src="https://embed.spotify.com/?uri=spotify:track:3QKCxyJA3ITuCAaxEhjAxt" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+						<iframe src="https://embed.spotify.com/?uri=spotify:track:5a4ZTEMp6wULHTEzJclKxt" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+						<iframe src="https://embed.spotify.com/?uri=spotify:track:7Ax6EyL9YP2Rj9naSv9yOT" width="300" height="80" frameborder="0" allowtransparency="true"></iframe> -->
+					</article>
+
+					<article id="recipe">
+						<p class="lead">Recipe: Whiskey Sour with a Red Wine Float &amp; Maple Syrup </p>
+						<p><strong>Ingredients (simplified recipe):</strong></p>
+						<ul class='hug plain recipe'>
+							<li>2 oz bourbon whiskey</li>
+							<li>1 oz maple syrup</li>
+							<li>1 oz lemon juice (half a lemon)</li>
+							<li>1/2 tablespoon red wine</li>
+						</ul>
+						<p><strong>Directions:</strong></p>
+						<ol class='hug plain recipe'>
+							<li>Shake bourbon, maple syrup, and lemon juice with ice</li>
+							<li>Pour into a rocks glass with a big ice cube</li>
+							<li>Pour red wine over the top of a spoon so it floats on top</li>
+						</ol>
+					</article>
+				</div>
+			</div>
 		</div>
+		<footer>
+			Thanks!
+		</footer>
 	</body>
 </html>
