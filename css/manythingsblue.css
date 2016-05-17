@@ -18,6 +18,11 @@ ul.plain, ol.plain {
 	list-style-position:inside;
 }
 
+h1, h2, h3, h4 {
+	text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+}
+
 h2 {
 	font-weight: 100; 
 }
