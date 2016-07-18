@@ -4,19 +4,19 @@ body {
 }
 
 a {
-  color:#0079E7;
+  color: #0079E7;
   border-bottom: solid 1px #ddd;
   text-decoration: none;
 }
 a:visited {
-  color:#1D5B93;
+  color: #1D5B93;
 }
 a:hover {
-  color:#57A5EC;
+  color: #57A5EC;
 }
 
 ul.plain, ol.plain {
-  list-style-position:inside;
+  list-style-position: inside;
 }
 
 h1, h2, h3, h4 {
@@ -29,16 +29,15 @@ h2 {
 }
 
 #recipe {
-  background:#eee;
-  background:url(../img/congruent_outline.png) ;
-  padding:20px;
-  color:#fff;
+  background: url(../img/congruent_outline.png) #444;
+  padding: 20px;
+  color: #fff;
   margin: 20px;
   border-radius: 10px;
 }
 
 .recipe {
-  padding:15px;
+  padding: 15px;
 }
 
 .container {
@@ -50,7 +49,6 @@ h2 {
   max-width: 600px;
   margin: 0 auto;
   padding:0 20px;
-
   background: #456990;
   color: #eee;
 }
@@ -59,7 +57,7 @@ h2 {
   font-family: "soleil"; /*"Avenir Next Condensed";*/
   font-weight: 600;
   text-transform: uppercase;
-  color:#fff;
+  color: #fff;
   text-shadow: -.02em .02em 0 #000,.02em .02em 0 #000,0 .02em 0 #000;
 }
 #overview h1 span {
@@ -67,7 +65,7 @@ h2 {
 }
 
 #overview a {
-  color:#fff;
+  color: #fff;
 }
 
 ul#focus-skills {
@@ -76,47 +74,27 @@ ul#focus-skills {
 }
 ul#focus-skills li {
   
-  color:#fff;
-  padding:0px;
+  color: #fff;
+  padding: 0px;
   display: inline-block;  
-  margin:0 20px;
+  margin: 0 20px;
 }
 ul#focus-skills li .fa {
   font-size: 50%;
   position: relative;
-  top:-2px;
+  top: -2px;
 }
 
 
 #additional-skills {
-  // font-size:80%;
-  margin:0;padding:0;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 #additional-skills li {
   display: inline-block;
   margin: 10px 15px;
-}
-#additional-skills li:nth-child(7) {
-  color:#ddd;
-}
-#additional-skills li:nth-child(6) {
-  color:#ddd;
-}
-#additional-skills li:nth-child(5) {
-  color:#ddd;
-}
-#additional-skills li:nth-child(4) {
-  color:#ddd;
-}
-#additional-skills li:nth-child(3) {
-  color:#ddd;
-}
-#additional-skills li:nth-child(2) {
-  color:#ddd;
-}
-#additional-skills li:nth-child(1) {
   color:#ddd;
 }
 
@@ -126,7 +104,7 @@ ul#focus-skills li .fa {
 
 .col-2 {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -134,14 +112,13 @@ ul#focus-skills li .fa {
   flex: 1;
 }
 
-
 .game {
   flex: 1;
 }
 
 footer {
   padding: 1em 0;
-  border-top:dashed 1px #ddd;
+  border-top: dashed 1px #ddd;
   text-align: center;
   font-style: italic;
 }
@@ -156,10 +133,9 @@ footer {
   }
 
   #overview {
-    // font-size: 2em;
     max-width: 100%;
     padding-bottom: 20px;
-    margin:0;
+    margin: 0;
   }
 }
 
