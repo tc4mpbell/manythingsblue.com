@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  font-weight: 100; 
+  font-weight: 100;
 }
 
 #recipe {
@@ -42,26 +42,42 @@ h2 {
 
 .container {
   display: flex;
+  flex-direction: column;
 }
 
 #overview {
   text-align: center;
-  max-width: 600px;
+  max-width: 100%;/*600px;*/
   margin: 0 auto;
-  padding:0 20px;
+  padding: 20px;
   background: #456990;
   color: #eee;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 #overview h1 {
   font-size: 3.7em;
   font-family: "soleil"; /*"Avenir Next Condensed";*/
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 1em;
   color: #fff;
   text-shadow: -.02em .02em 0 #000,.02em .02em 0 #000,0 .02em 0 #000;
+  margin: 0;
 }
 #overview h1 span {
   display: inline-block;
+}
+
+#overview small {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 200;
 }
 
 #overview a {
@@ -73,10 +89,10 @@ ul#focus-skills {
   padding: 0;
 }
 ul#focus-skills li {
-  
+
   color: #fff;
   padding: 0px;
-  display: inline-block;  
+  display: inline-block;
   margin: 0 20px;
 }
 ul#focus-skills li .fa {
