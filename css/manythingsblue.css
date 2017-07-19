@@ -5,7 +5,7 @@ body {
 
 a {
   color: #0079E7;
-  border-bottom: solid 1px #ddd;
+  // border-bottom: solid 1px #ddd;
   text-decoration: none;
 }
 a:visited {
@@ -13,6 +13,10 @@ a:visited {
 }
 a:hover {
   color: #57A5EC;
+}
+
+.invert a:visited {
+  color: #6190D5;
 }
 
 ul.plain, ol.plain {
@@ -28,16 +32,14 @@ h2 {
   font-weight: 100;
 }
 
-#recipe {
-  background: url(../img/congruent_outline.png) #444;
-  padding: 20px;
-  color: #fff;
-  margin: 20px;
-  border-radius: 10px;
+section {
+  max-width: 775px;
+  margin: 0 auto;
 }
 
-.recipe {
-  padding: 15px;
+.invert {
+  background: #282828;
+  color: #eee;
 }
 
 .container {
@@ -45,28 +47,35 @@ h2 {
   flex-direction: column;
 }
 
+article {
+  padding: 2em;
+}
+
 #overview {
   text-align: center;
   max-width: 100%;/*600px;*/
-  margin: 0 auto;
-  padding: 20px;
-  background: #456990;
-  color: #eee;
+  margin: 2em auto;
+  // padding: 20px;
+  // background: #456990;
+  // color: #eee;
 
-  display: flex;
+  // display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 #overview h1 {
-  font-size: 3.7em;
+  font-size: 5.7em;
   font-family: "soleil"; /*"Avenir Next Condensed";*/
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1em;
-  color: #fff;
-  text-shadow: -.02em .02em 0 #000,.02em .02em 0 #000,0 .02em 0 #000;
+  // text-shadow: -.02em .02em 0 #000,.02em .02em 0 #000,0 .02em 0 #000;
   margin: 0;
+
+  color: #dee;
 }
+
 #overview h1 span {
   display: inline-block;
 }
@@ -78,23 +87,21 @@ h2 {
   text-transform: none;
   text-shadow: none;
   font-weight: 200;
-}
-
-#overview a {
-  color: #fff;
+  margin-top: 1em;
+  color: #222;
 }
 
 ul#focus-skills {
   list-style: none;
   padding: 0;
 }
-ul#focus-skills li {
 
-  color: #fff;
+ul#focus-skills li {
   padding: 0px;
-  display: inline-block;
-  margin: 0 20px;
+  // display: inline-block;
+  margin: 0 2em;
 }
+
 ul#focus-skills li .fa {
   font-size: 50%;
   position: relative;
@@ -109,9 +116,8 @@ ul#focus-skills li .fa {
 }
 
 #additional-skills li {
-  display: inline-block;
+  // display: inline-block;
   margin: 10px 15px;
-  color:#ddd;
 }
 
 #main-content {
@@ -124,7 +130,11 @@ ul#focus-skills li .fa {
   flex-wrap: wrap;
 }
 
-#personal, #recipe {
+#personal {
+  flex: 1.2;
+}
+
+#recipe {
   flex: 1;
 }
 
