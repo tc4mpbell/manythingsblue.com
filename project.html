@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taylor's Project Progress (yo)</title>
+
+	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
+	<link href='css/typebase.css' rel='stylesheet' type='text/css'>
+	<link href='css/manythingsblue.css' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		video {
+
+			float: left;
+			width:53%;
+		}
+
+		video:last-child {
+			width:41%;
+			padding-left: 1%;
+			margin-left: 1%;
+			border-left: dashed 1px #aaa;
+		}
+
+		button {
+		  display: inline-block;
+		  margin: 10px 0px;
+		  padding: 10px 45px;
+		  font-size: 24px;
+		  font-weight: bold;
+		  line-height: 1.2;
+		  appearance: none;
+		  box-shadow: none;
+		  border-radius: 20px;
+		}
+
+		button:focus {
+		  outline: none;
+		}
+
+		button {
+		  color: #6496c8;
+		  background: rgba(0,0,0,0);
+		  border: solid 5px #6496c8;
+		}
+		button:hover,
+		button.hover {
+		  border-color: #346392;
+		  color: #fff;
+
+
+		  background: #346392;
+		}
+		button:active,
+		button.active {
+		  border-color: #27496d;
+		  color: #27496d;
+		}
+
+		button.play {
+			width: 640px;
+
+			margin-bottom: 1em;
+		}
+
+		.vidlog {
+			border-bottom: dashed 1px #aaa;
+			padding: 1em 0;
+		}
+
+		p, .vidlog ul {
+			max-width: 640px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id='main-content'>
+		<p>
+			<em>What's going on?</em><br>
+			Taylor's building a side project.<br>
+			Here's the progress:
+		</p>
+
+		<div class='vidlog' id='log20170811'>
+			<h2>Aug 11, 2017</h2>
+			<small>2.5hrs</small>
+			<p>
+				Worked on the Requirements screen -- decided to move ahead in React vs. switching back to just ERB templates. Got some good parts of the design done, some components starting to come together.
+			</p>
+			
+			<p><strong>Lessons learned today:</strong></p>
+			<ul>
+				<li>Could be more focused: Read through some articles I could have skimmed, and set up hot module reloading (critical? No. Awesome? Yes).</li>
+			</ul>
+
+			<button class='button play' data-date='20170811'>Watch it!</button>
+
+			<br clear='all' />
+
+			<video src="worklogs/screen20170811.mp4"></video>
+			<video src="worklogs/webcam20170811.mp4"></video>
+		</div>
+	</div>
+
+	<script>
+		document.querySelectorAll(".play").forEach(function(el) {
+			el.addEventListener("click", function() {
+				var date = this.getAttribute('data-date');
+				document.querySelectorAll("#log" + date + " video").forEach(function(video) {
+					video.play();
+				});
+			});
+		});
+	</script>
+</body>
+</html>
