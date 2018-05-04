@@ -1,40 +1,99 @@
 body {
-  font-family: "chaparral pro";
-  background: #fff url(../img/trex.png) no-repeat 020px 1100px
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  background: #fefafa;
 }
+
+/* poor choices */
+.lurid { background: #3eff0d; 
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1cf200+0,02aa00+100 */
+background: rgb(28,242,0); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(28,242,0,1) 0%, rgba(2,170,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(28,242,0,1) 0%,rgba(2,170,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(28,242,0,1) 0%,rgba(2,170,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cf200', endColorstr='#02aa00',GradientType=0 ); /* IE6-9 */
+
+}
+.lurid a { color: #bf1a7a; }
+.lurid .light { color: #6c8261; }
+.lurid footer { border-top-color: #fff; }
+/* /poor choices */
+
 
 a {
   color: #0079E7;
-  // border-bottom: solid 1px #ddd;
   text-decoration: none;
 }
+
 a:visited {
   color: #1D5B93;
 }
+
 a:hover {
-  color: #57A5EC;
+  color: #014b8e;
+}
+
+.invert a {
+  color: #7ebffb;
 }
 
 .invert a:visited {
   color: #6190D5;
 }
-
-ul.plain, ol.plain {
-  list-style-position: inside;
+.invert a:hover {
+  color: #bbd8f3;
 }
+
 
 h1, h2, h3, h4 {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1;
 }
 
+h1 {
+  font-size: 3em;
+}
+
 h2 {
   font-weight: 100;
 }
 
+h4, h5 {
+  text-transform: uppercase;
+}
+
 section {
   max-width: 775px;
-  margin: 0 auto;
+  margin: 2rem auto 1rem;
+}
+
+section *:first-child {
+  margin-top:0;
+}
+
+.light {
+  color: #8c8585;
+}
+
+.teensy {
+  font-size: 0.5em;
+  line-height: 0.8em;
+}
+
+.small {
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.large {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+
+.scrunched {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .invert {
@@ -42,131 +101,77 @@ section {
   color: #eee;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-article {
-  padding: 2em;
-}
-
-#overview {
+.center-all {
+  justify-content: center;
+  align-self: center;
   text-align: center;
-  max-width: 100%;/*600px;*/
-  margin: 2em auto;
-  // padding: 20px;
-  // background: #456990;
-  // color: #eee;
+}
 
-  // display: flex;
-  flex-direction: row;
-  align-items: center;
+#overview > * {
+  padding: 1rem;
 }
 
 #overview h1 {
-  font-size: 5.7em;
-  font-family: "soleil"; /*"Avenir Next Condensed";*/
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 1em;
-  // text-shadow: -.02em .02em 0 #000,.02em .02em 0 #000,0 .02em 0 #000;
-  margin: 0;
-
-  color: #dee;
-}
-
-#overview h1 span {
-  display: inline-block;
-}
-
-#overview small {
-  display: block;
-  font-size: 1rem;
-  line-height: 1.2rem;
-  text-transform: none;
-  text-shadow: none;
   font-weight: 200;
-  margin-top: 1em;
-  color: #222;
+  font-family: "Brush Script MT", cursive;
+  line-height: 1em;
 }
 
-ul#focus-skills {
+#full-stack {
+  margin-top: 0.3em;
+  line-height: 1.2em;
+}
+
+ul.plain {
   list-style: none;
   padding: 0;
 }
 
-ul#focus-skills li {
-  padding: 0px;
-  // display: inline-block;
-  margin: 0 2em;
-}
-
-ul#focus-skills li .fa {
-  font-size: 50%;
-  position: relative;
-  top: -2px;
-}
-
-
-#additional-skills {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#additional-skills li {
-  // display: inline-block;
-  margin: 10px 15px;
-}
-
-#main-content {
-  padding: 20px;
-}
-
-.col-2 {
+.flexify {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-#personal {
-  flex: 1.2;
-}
-
-#recipe {
+.flexify > * {
   flex: 1;
+  min-width: 450px;
 }
 
-.game {
-  flex: 1;
-}
 
 footer {
   padding: 1em 0;
   border-top: dashed 1px #ddd;
   text-align: center;
-  font-style: italic;
+}
+
+.project-block {
+  padding: 1rem;
+  margin: 1rem;
+  background: #223;
+  color: #eee;
+}
+
+.project-block h3 {
+  margin-top: 0;
+}
+
+.project-block nav {
+  color: #656679;
+  margin-top:0.5rem;
 }
 
 @media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-  #main-content {
-    max-width: 800px;
-    margin: 0 auto;
+  h2 {
+    font-size: 2em;
   }
 
-  #overview {
-    max-width: 100%;
-    padding-bottom: 20px;
-    margin: 0;
+  section {
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: none;
   }
-}
 
-@media (max-width: 1200px) {
-  .col-2 {
-    flex-direction: column;
+  .flexify > * {
+    min-width: 300px;
   }
 }
