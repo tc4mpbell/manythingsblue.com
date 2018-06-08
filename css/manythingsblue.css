@@ -1,30 +1,53 @@
 body {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   background: #fefafa;
 }
 
 /* poor choices */
-.lurid { 
+.lurid {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#21ff00+0,18ce00+100 */
-  background: rgb(33,255,0); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(33,255,0,1) 0%, rgba(24,206,0,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(33,255,0,1) 0%,rgba(24,206,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(33,255,0,1) 0%,rgba(24,206,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: rgb(33, 255, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(33, 255, 0, 1) 0%,
+    rgba(24, 206, 0, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(33, 255, 0, 1) 0%,
+    rgba(24, 206, 0, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 255, 0, 1) 0%,
+    rgba(24, 206, 0, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21ff00', endColorstr='#18ce00',GradientType=0 ); /* IE6-9 */
 }
-.lurid a { color: #bf1a7a; }
-.lurid .light { color: #6c8261; }
-.lurid footer { border-top-color: #fff; }
+.lurid a {
+  color: #bf1a7a;
+}
+.lurid .light {
+  color: #6c8261;
+}
+.lurid footer {
+  border-top-color: #fff;
+}
 /* /poor choices */
 
+hr {
+  border: none;
+  border-top: dotted 8px #aaa;
+}
 
 a {
-  color: #0079E7;
+  color: #0079e7;
   text-decoration: none;
 }
 
 a:visited {
-  color: #1D5B93;
+  color: #1d5b93;
 }
 
 a:hover {
@@ -36,14 +59,16 @@ a:hover {
 }
 
 .invert a:visited {
-  color: #6190D5;
+  color: #6190d5;
 }
 .invert a:hover {
   color: #bbd8f3;
 }
 
-
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1;
 }
@@ -56,8 +81,13 @@ h2 {
   font-weight: 100;
 }
 
-h4, h5 {
+h4,
+h5 {
   text-transform: uppercase;
+}
+
+code {
+  font-family: Courier New, monospace;
 }
 
 section {
@@ -66,7 +96,7 @@ section {
 }
 
 section *:first-child {
-  margin-top:0;
+  margin-top: 0;
 }
 
 .light {
@@ -87,7 +117,6 @@ section *:first-child {
   font-size: 1.5em;
   line-height: 1.5em;
 }
-
 
 .scrunched {
   margin-top: 0;
@@ -110,8 +139,8 @@ section *:first-child {
 }
 
 #overview h1 {
-  font-weight: 200;
-  font-family: "Zapfino", "Brush Script MT", 'Lucida Handwriting', 'Monotype Corsiva', cursive;
+  font-weight: 800;
+  font-family: Courier New, monospace;
   line-height: 1em;
 }
 
@@ -135,7 +164,6 @@ ul.plain {
   min-width: 450px;
 }
 
-
 footer {
   padding: 1em 0;
   border-top: dashed 1px #ddd;
@@ -145,8 +173,9 @@ footer {
 .project-block {
   padding: 1rem;
   margin: 1rem;
-  background: #223;
-  color: #eee;
+  color: #223;
+  background: #fff;
+  border: dotted 8px #aaa;
 }
 
 .project-block h3 {
@@ -155,7 +184,7 @@ footer {
 
 .project-block nav {
   color: #656679;
-  margin-top:0.5rem;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 900px) {
