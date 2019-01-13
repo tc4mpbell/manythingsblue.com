@@ -6,6 +6,7 @@
 
 	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
 	<link href='css/typebase.css' rel='stylesheet' type='text/css'>
+	<link href='css/worst_framework.css' rel='stylesheet' type='text/css'>
 	<link href='css/manythingsblue.css' rel='stylesheet' type='text/css'>
 
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -13,131 +14,143 @@
 </head>
 
 <body class='lurixd'>
-	<header id="overview" class='flexify'>
-		<div class='center-all'>
-			<h1 class='scrunched'>
-					Taylor<br />
-					<span>Campbell</span>
-				</h1>
-			<h1 id='full-stack' class='scrunched'>🥞</h1>
-			<p class='lead scrunched'>
-				<code>
-					<bs>Web Developer</bs><br>
-					<em><small>in</small></em>
-					<sb>Richmond, VA</sb></code>
-			</p>
-		</div>
-		<div>
-			<h5 class='scrunched'>&rarr; Currently building with</h5> ✨ <b>Ruby on Rails</b> &amp; <b>React</b> ✨
-			<br><small>(but do you <em>need</em> an SPA?)</small>
+	<div class="columnz">
+		<div class='two-thirdsx'>
+			<header id="overview" class='flexify'>
+				<div class='center-allx'>
+					<em style='color: #666;'>manythingsblue is the website of</em>
+					<h1 class='scrunched'>
+						Taylor
+						<span>Campbell</span>
+						🥞
+					</h1>
+				</div>
+				<div>
+					<h5 class='scrunched'>&rarr; Currently building with</h5> ✨ <b>Ruby on Rails</b> &amp; <b>React</b> ✨
 
-			<h5 class='scrunchedx'>&rarr; An incomplete list of stuff I've worked with</h5>
-			<div id="additional-skills" class='plain small light'>
+					<h5 class='scrunchedx'>&rarr; An incomplete list of stuff I've worked with</h5>
+					<div id="additional-skills" class='plain small light'>
 
-				PostgreSQL, MySQL, HTML, CSS, Javascript, Sass, Bower, Grunt, jQuery, PHP, WordPress, AWS, Ubuntu, Mac OS X, Elasticsearch, AngularJS
+						PostgreSQL, MySQL, HTML, CSS, Javascript, Sass, Bower, Grunt, jQuery, PHP, WordPress, AWS, Ubuntu, Mac OS X, Elasticsearch, AngularJS
 
+					</div>
+
+					<p>
+						<a href='mailto:taylor@manythingsblue.com'>🕊️ taylor@manythingsblue.com</a>
+					</p>
+				</div>
+			</header>
+
+			<hr />
+
+			<section id='professionally'>
+				<h2>Professionally:</h2>
+				<p class='lead'>
+					I write web apps.
+				</p>
+				<p>Since I was ~15, so almost half my life now. They (and I) have gotten better since my first attempts. I'm currently happily working with <a href='http://rubyonrails.com' target="_blank">Ruby on Rails</a>, <a href='https://facebook.github.io/react'
+					  target='_blank'>React</a>, and <a href='http://www.postgresql.org/' target='_blank'>PostgreSQL</a>, served with Nginx+Passenger on AWS.</p>
+
+				<h3>A brief history</h3>
+				<ol>
+					<li>Started making games for fun when I was 11.</li>
+					<li>Learned HTML, CSS, PHP, JS in mid-teens to make websites for my games, family trips, Harry Potter trivia bots, etc.</li>
+					<li>Started college at 15. Graduated with a Computer Science degree at 19.</li>
+					<li>Got a Big Corporate intranet developer job. Read a book, learned .NET, rewrote an Outlook plugin, wrote an AJAX library.</li>
+					<li>Learned Ruby on Rails on the side. Quit to start my own company.</li>
+					<li>Launched Coupley, journaling web app for couples.</li>
+					<li>Launched Storyblue, writing software for novelists.</li>
+					<li>Wrote Ruby on Rails apps and WordPress sites for clients.</li>
+					<li>Started working with RTS Labs. Joined full-time. Started working with AngularJS, PostgreSQL, React.</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Unprofessionally:</h2>
+				<p class='lead'>
+					I write code for fun.
+				</p>
+				<p>I've always been interested in game development -- I fell in love with creating things on computers when I was 11, hanging out on AOL forums and discussing GameMaker and Hypercard. In 2015 I did a couple Ludum Dare 48-hour game jams, with great enjoyment
+					and sleepiness.</p>
+			</section>
+
+			<section class='scrunched'>
+				<h5 class='scrunched'>&rarr; Ludum Dare games:</h5>
+			</section>
+			<div class="flexify">
+				<div class="project-block">
+					<h3>Cheats at Marathons by Not Breathing</h3>
+					<small>Ludum Dare 33: August 21st-24th, 2015</small>
+
+					<nav>
+						<a class='btn' href='https://manythingsblue.itch.io/cheats-at-marathons-by-not-breathing' target="_blank">Play</a> ~
+						<a href='https://github.com/tc4mpbell/ld33-vampire-running-game' target='_blank'>Source Code</a>
+					</nav>
+
+					<p>I used PhaserJS here. Good engine, but the docs were confusing. Keeping scope under control made this a complete, if not spectacular, first-ever-game. Code was fantastically bad.</p>
+				</div>
+
+				<div class="project-block">
+					<h3>Your Very Own Vampire Garden</h3>
+					<small>Ludum Dare 34: December 11th-14th, 2015</small>
+
+					<nav>
+						<a class='btn' href='https://manythingsblue.itch.io/your-very-own-vampire-garden' target="_blank">Play</a> ~
+						<a href='https://github.com/tc4mpbell/ld34-vampire-garden' target='_blank'>Source Code</a>
+					</nav>
+
+					<p>I used Phaser as the engine again, this time with the Brand New Magic of Babel so I could use ES6 features (classes!). That all worked well, I only failed in the 'build a fun game' department. Vastly superior to last, code-organization-wise.</p>
+				</div>
 			</div>
 
-			<p>
-				<a href='mailto:taylor@manythingsblue.com'>🕊️ taylor@manythingsblue.com</a>
-			</p>
-		</div>
-	</header>
+			<div class='col-2'>
+				<section id="personal">
+					<p class='lead'>
+						When not writing code...
+					</p>
+					<p>
+						Richmond has a fantastic <a href='http://vmfa.museum' target="_blank">art museum</a>. Anya and I go there whenever opportunity arises.
+					</p>
 
-	<hr />
+					<p>
+						I also like to hang out with my kids -- Imogen loves to read and is currently hooked on <a href='http://code.org' target="_blank">Code.org</a>, which is <em>awesome</em>, Ira is into Star Wars, though he still calls Chewbacca "the bear" sometimes.
+						I read: Gene Wolfe, Neil Gaiman, Iain M. Banks, Terry Pratchett (and of course Tolkien, Lewis, etc.).
+					</p>
+					<p>
+						In the fake sports category, I got into golf a few years ago. I play with my dad once a month or so on a Friday, since we're both off work. It's very addicting, and should be relaxing.
+					</p>
+					<p>
+						I listen to music &ndash; Radiohead, Belle and Sebastian, Libertines, Punch Brothers, Sturgill Simpson, Vampire Weekend. I should listen to more Beethoven.
+					</p>
 
-	<section id='professionally'>
-		<h2>Professionally:</h2>
-		<p class='lead'>
-			I write web apps.
-		</p>
-		<p>Since I was ~15, so almost half my life now. They (and I) have gotten better since my first attempts. I'm currently happily working with <a href='http://rubyonrails.com' target="_blank">Ruby on Rails</a>, <a href='https://facebook.github.io/react' target='_blank'>React</a>,
-			and <a href='http://www.postgresql.org/' target='_blank'>PostgreSQL</a>, served with Nginx+Passenger on AWS.</p>
+				</section>
+			</div>
 
-		<h3>A brief history</h3>
-		<ol>
-			<li>Started making games for fun when I was 11.</li>
-			<li>Learned HTML, CSS, PHP, JS in mid-teens to make websites for my games, family trips, Harry Potter trivia bots, etc.</li>
-			<li>Started college at 15. Graduated with a Computer Science degree at 19.</li>
-			<li>Got a Big Corporate intranet developer job. Read a book, learned .NET, rewrote an Outlook plugin, wrote an AJAX library.</li>
-			<li>Learned Ruby on Rails on the side. Quit to start my own company.</li>
-			<li>Launched Coupley, journaling web app for couples.</li>
-			<li>Launched Storyblue, writing software for novelists.</li>
-			<li>Wrote Ruby on Rails apps and WordPress sites for clients.</li>
-			<li>Started working with RTS Labs. Joined full-time. Started working with AngularJS, PostgreSQL, React.</li>
-		</ol>
-	</section>
-
-	<section>
-		<h2>Unprofessionally:</h2>
-		<p class='lead'>
-			I write code for fun.
-		</p>
-		<p>I've always been interested in game development -- I fell in love with creating things on computers when I was 11, hanging out on AOL forums and discussing GameMaker and Hypercard. In 2015 I did a couple Ludum Dare 48-hour game jams, with great enjoyment
-			and sleepiness.</p>
-	</section>
-
-	<section class='scrunched'>
-		<h5 class='scrunched'>&rarr; Ludum Dare games:</h5>
-	</section>
-	<div class="flexify">
-		<div class="project-block">
-			<h3>Cheats at Marathons by Not Breathing</h3>
-			<small>Ludum Dare 33: August 21st-24th, 2015</small>
-
-			<nav>
-				<a class='btn' href='https://manythingsblue.itch.io/cheats-at-marathons-by-not-breathing' target="_blank">Play</a> ~
-				<a href='https://github.com/tc4mpbell/ld33-vampire-running-game' target='_blank'>Source Code</a>
-			</nav>
-
-			<p>I used PhaserJS here. Good engine, but the docs were confusing. Keeping scope under control made this a complete, if not spectacular, first-ever-game. Code was fantastically bad.</p>
+			<footer>
+				<span class='large'>🥃</span>
+				<br>
+				<small class='teensy'>Updated September 2018</small>
+			</footer>
 		</div>
 
-		<div class="project-block">
-			<h3>Your Very Own Vampire Garden</h3>
-			<small>Ludum Dare 34: December 11th-14th, 2015</small>
+		<div class='bg-moody'>
+			<h4>Nav</h4>
+			<a class='big' href='/'>Home</a>
+			<br>
+			<a class='big' href='https://blog.manythingsblue.com' >Blog</a>
 
-			<nav>
-				<a class='btn' href='https://manythingsblue.itch.io/your-very-own-vampire-garden' target="_blank">Play</a> ~
-				<a href='https://github.com/tc4mpbell/ld34-vampire-garden' target='_blank'>Source Code</a>
-			</nav>
-
-			<p>I used Phaser as the engine again, this time with the Brand New Magic of Babel so I could use ES6 features (classes!). That all worked well, I only failed in the 'build a fun game' department. Vastly superior to last, code-organization-wise.</p>
+			<h4>Projects</h4>
+			<div class="box">
+				<div>
+					<a class='big' href='http://projectpoll.co' target="_blank">ProjectPoll &rarr;</a>
+					<br>
+					<small><b>Beta</b></small>
+				</div>
+				<br/>
+				<div>Help project managers uncover problems early by anonymously polling their teams.</div>
+			</div>
 		</div>
 	</div>
-
-
-
-
-	<div class='col-2'>
-		<section id="personal">
-			<p class='lead'>
-				When not writing code...
-			</p>
-			<p>
-				Richmond has a fantastic <a href='http://vmfa.museum' target="_blank">art museum</a>. Anya and I go there whenever opportunity arises.
-			</p>
-
-			<p>
-				I also like to hang out with my kids -- Imogen loves to read and is currently hooked on <a href='http://code.org' target="_blank">Code.org</a>, which is <em>awesome</em>, Ira is into Star Wars, though he still calls Chewbacca "the bear" sometimes.
-				I read: Gene Wolfe, Neil Gaiman, Iain M. Banks, Terry Pratchett (and of course Tolkien, Lewis, etc.).
-			</p>
-			<p>
-				In the fake sports category, I got into golf a few years ago. I play with my dad once a month or so on a Friday, since we're both off work. It's very addicting, and should be relaxing.
-			</p>
-			<p>
-				I listen to music &ndash; Radiohead, Belle and Sebastian, Libertines, Punch Brothers, Sturgill Simpson, Vampire Weekend. I should listen to more Beethoven.
-			</p>
-
-		</section>
-	</div>
-
-	<footer>
-		<span class='large'>🥃</span>
-		<br>
-		<small class='teensy'>Updated 05-2018</small>
-	</footer>
-
 
 </body>
 

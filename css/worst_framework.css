@@ -1,0 +1,53 @@
+/*** worst_framework.css ****
+ Hand-crafted with utmost care in 2018 by Taylor Campbell
+*/
+
+.columnz {
+  display: flex;
+  flex-wrap: wrap;
+}
+.columnz > * {
+  padding: 1rem;
+  flex: 1;
+  min-width: 350px;
+}
+.columnz > .two-thirds {
+  flex: 2;
+}
+
+.bg-moody {
+  background: #334;
+  color: #eee;
+}
+
+.bg-moody a {
+  color: #ffa;
+}
+.bg-moody a:visited {
+  color: #ffc;
+}
+.bg-moody a:hover {
+  text-decoration: underline;
+}
+
+.box {
+  /* text-align: center; */
+  /* display: flex; */
+  padding: 1rem;
+  background: #0003;
+
+  transition: all 0.5s;
+}
+
+.box:hover {
+  background: rgba(255,255,255,0.05);
+
+}
+
+.big {
+  font-size: 2rem;
+}
+
+.text-right {
+  text-align: right;
+}

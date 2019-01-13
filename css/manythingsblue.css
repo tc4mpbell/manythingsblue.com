@@ -139,8 +139,8 @@ section *:first-child {
 }
 
 #overview h1 {
-  font-weight: 800;
-  font-family: Courier New, monospace;
+  font-weight: normal;
+  /* font-family: Courier New, monospace; */
   line-height: 1em;
 }
 
@@ -153,7 +153,7 @@ ul.plain {
   list-style: none;
   padding: 0;
 }
-
+/*
 .flexify {
   display: flex;
   flex-direction: row;
@@ -162,7 +162,7 @@ ul.plain {
 .flexify > * {
   flex: 1;
   min-width: 450px;
-}
+} */
 
 footer {
   padding: 1em 0;
